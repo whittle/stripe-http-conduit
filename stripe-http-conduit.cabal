@@ -17,9 +17,21 @@ extra-source-files:     LICENSE
 
 library
   default-language:     Haskell2010
-  build-depends:        base >= 4.7 && < 5
+  ghc-options:          -Wall
   hs-source-dirs:       src
-  exposed-modules:      Lib
+  build-depends:        base >= 4.7 && < 5
+  exposed-modules:      Web.Stripe.Client.HttpConduit
+
+test-suite tests
+  type:                 exitcode-stdio-1.0
+  default-language:     Haskell2010
+  ghc-options:          -Wall
+  hs-source-dirs:       tests
+  build-depends:        base >= 4.7 && < 5
+                      , stripe-core >= 2.0
+                      , stripe-tests >= 2.0
+                      , stripe-http-conduit
+  main-is:              Main.hs
 
 source-repository head
   type:                 git
