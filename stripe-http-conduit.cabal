@@ -20,6 +20,15 @@ library
   ghc-options:          -Wall
   hs-source-dirs:       src
   build-depends:        base >= 4.7 && < 5
+                      , aeson >= 0.11
+                      , conduit >= 1.2
+                      , conduit-extra >= 1.1
+                      , data-default >= 0.5
+                      , http-conduit >= 2.1
+                      , http-types >= 0.9
+                      , resourcet >= 1.1
+                      , stripe-core >= 2.0
+                      , text >= 1.2
   exposed-modules:      Web.Stripe.Client.HttpConduit
 
 test-suite tests
@@ -28,6 +37,8 @@ test-suite tests
   ghc-options:          -Wall
   hs-source-dirs:       tests
   build-depends:        base >= 4.7 && < 5
+                      , free >= 4.12
+                      , http-conduit >= 2.1
                       , stripe-core >= 2.0
                       , stripe-tests >= 2.0
                       , stripe-http-conduit
