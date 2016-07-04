@@ -39,9 +39,10 @@ packages:
 - '.'
 - location:
     git: git@github.com:dmjio/stripe
-    commit: f71719f3c436a60569fc80b1024ba97f4b50c616
+    commit: a39b8119d9a0270f31fca2cfc636406f41a84232
   extra-dep: true
   subdirs:
+  - stripe-core
   - stripe-tests
 
 # Dependency packages to be pulled from upstream that are not in the resolver
